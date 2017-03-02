@@ -18,7 +18,7 @@ if(isset($_POST['edit'])){
     $culturing = $_POST['culturing'];
     $dirttype = (int)$_POST['dirttype'];
 
-    $price = (int)$_POST['price'];
+    $price = (float)$_POST['price'];
 
     $description = $_POST['description'];
 
@@ -159,7 +159,7 @@ $image_3 = $Gallery->getImage($product->image_3);
                 </div>
                 <div class="form-group">
                     <label for="form-title">Price *</label>
-                    <input id="form-title" value="<?php echo $product->price;?>" class="form-control" name="price" step="0.1" type="number">
+                    <input id="form-title" value="<?php echo $product->price;?>" class="form-control" name="price" step="0.01" type="number">
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@ $image_3 = $Gallery->getImage($product->image_3);
             <div class="modal-body">
                 <div id="file-manager1"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=1', function(data) {
                     $('#file-manager1').html(data);
                 });
                 </script>
@@ -214,7 +214,7 @@ $image_3 = $Gallery->getImage($product->image_3);
             <div class="modal-body">
                 <div id="file-manager2"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=2', function(data) {
                     $('#file-manager2').html(data);
                 });
                 </script>
@@ -236,7 +236,7 @@ $image_3 = $Gallery->getImage($product->image_3);
             <div class="modal-body">
                 <div id="file-manager3"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=3', function(data) {
                     $('#file-manager3').html(data);
                 });
                 </script>

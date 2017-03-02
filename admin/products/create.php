@@ -16,9 +16,9 @@ if(isset($_POST['create'])){
     $image_3 = $_POST['image_id_3'];
 
     $culturing = $_POST['culturing'];
-    $dirttype = $_POST['dirttype'];
+    $dirttype = (int)$_POST['dirttype'];
 
-    $price = $_POST['price'];
+    $price = (float)$_POST['price'];
 
     $description = $_POST['description'];
 
@@ -152,7 +152,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/admin/header.php';
                 </div>
                 <div class="form-group">
                     <label for="form-title">Price *</label>
-                    <input id="form-title" class="form-control" name="price" step="0.1" type="number">
+                    <input id="form-title" class="form-control" name="price" step="0.01" type="number">
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/admin/header.php';
             <div class="modal-body">
                 <div id="file-manager1"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=1', function(data) {
                     $('#file-manager1').html(data);
                 });
                 </script>
@@ -207,7 +207,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/admin/header.php';
             <div class="modal-body">
                 <div id="file-manager2"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=2', function(data) {
                     $('#file-manager2').html(data);
                 });
                 </script>
@@ -229,7 +229,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/admin/header.php';
             <div class="modal-body">
                 <div id="file-manager3"></div>
                 <script>
-                $.get('/admin/gallery/loader.php', function(data) {
+                $.get('/admin/gallery/loader.php?extra_id=3', function(data) {
                     $('#file-manager3').html(data);
                 });
                 </script>

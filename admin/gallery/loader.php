@@ -1,12 +1,16 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
 
+$extra_id = "";
+if(isset($_GET['extra_id'])){
+    $extra_id = "-".$_GET['extra_id'];
+}
 
 if(!isset($_GET['item'])){
     $Categories = $Gallery->getCategories();
-    echo "<select id=\"selectCat\" class=\"form-control\">\n";
+    echo "<select class=\"selectCat form-control\">\n";
     foreach ($Categories as $category) {
-        echo "<option value=\"{$category->id}\">{$category->name}</option>\n";
+        echo "<option value=\"{$category->id}{$extra_id}\">{$category->name}</option>\n";
     }
     echo "</select>";
 
@@ -15,7 +19,7 @@ if(!isset($_GET['item'])){
         if($keyID==0){
             $display="block";
         }
-        echo "<div id=\"cat-{$category->id}\" class=\"categories\" style=\"display:$display;\">\n";
+        echo "<div id=\"cat-{$category->id}{$extra_id}\" class=\"categories{$extra_id}\" style=\"display:$display;\">\n";
 
 
 
@@ -57,8 +61,9 @@ if(!isset($_GET['item'])){
     }
 
     echo "<script>
-    $('#selectCat').on('change', function() {
-        $('.categories').hide();
+    $('.selectCat').on('change', function() {
+        $('.categories{$extra_id}').hide();
+        console.log('#cat-' + this.value);
         $('#cat-' + this.value).show();
     })
     </script>";
