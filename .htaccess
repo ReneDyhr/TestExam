@@ -1,0 +1,42 @@
+RewriteEngine On
+
+RewriteRule ^admin/menu/list(|/)$ /admin/menu/list.php [NC]
+RewriteRule ^admin/menu/delete/([0-9\.+-]+)(|/)$ /admin/menu/delete.php?item_id=$1 [L]
+
+RewriteRule ^admin/users/list(|/)$ /admin/users/list.php [NC]
+
+RewriteRule ^admin/pages/list(|/)$ /admin/pages/list.php [NC]
+RewriteRule ^admin/pages/create(|/)$ /admin/pages/create.php [NC]
+RewriteRule ^admin/pages/edit/([0-9\.+-]+)(|/)$ /admin/pages/edit.php?page_id=$1 [L]
+RewriteRule ^admin/pages/delete/([0-9\.+-]+)(|/)$ /admin/pages/delete.php?page_id=$1 [L]
+
+RewriteRule ^admin/orders/list(|/)$ /admin/orders/list.php [NC]
+RewriteRule ^admin/orders/order/([0-9\.+-]+)(|/)$ /admin/orders/order.php?order_id=$1 [L]
+
+RewriteRule ^admin/products/list(|/)$ /admin/products/list.php [NC]
+RewriteRule ^admin/products/create(|/)$ /admin/products/create.php [NC]
+RewriteRule ^admin/products/edit/([0-9\.+-]+)(|/)$ /admin/products/edit.php?product_id=$1 [L]
+RewriteRule ^admin/products/delete/([0-9\.+-]+)(|/)$ /admin/products/delete.php?product_id=$1 [L]
+
+RewriteRule ^admin/products/categories(|/)$ /admin/products/categories/list.php [NC]
+RewriteRule ^admin/products/categories/edit/([0-9\.+-]+)(|/)$ /admin/products/categories/edit.php?category_id=$1 [L]
+RewriteRule ^admin/products/categories/delete/([0-9\.+-]+)(|/)$ /admin/products/categories/delete.php?category_id=$1 [L]
+
+RewriteRule ^admin/products/dirt(|/)$ /admin/products/dirt/list.php [NC]
+RewriteRule ^admin/products/dirt/edit/([0-9\.+-]+)(|/)$ /admin/products/dirt/edit.php?dirt_id=$1 [L]
+RewriteRule ^admin/products/dirt/delete/([0-9\.+-]+)(|/)$ /admin/products/dirt/delete.php?dirt_id=$1 [L]
+
+RewriteRule ^admin/gallery/list(|/)$ /admin/gallery/list.php [NC]
+RewriteRule ^admin/gallery/categories/delete/([0-9\.+-]+)(|/)$ /admin/gallery/deleteCat.php?cat_id=$1 [L]
+
+
+RewriteRule ^cart(|/)$ /cart.php [NC]
+RewriteRule ^cart/([0-9\.+-]+)(|/)$ /deleteCart.php?product_id=$1 [L]
+
+RewriteRule ^settings(|/)$ /settings.php [NC]
+RewriteRule ^logout(|/)$ /logout.php [NC]
+
+RewriteRule ^([0-9a-zA-Z-_]+)$ /single-page.php?slug=$1 [NC]
+
+RewriteRule ^category/([0-9a-zA-Z-_]+)$ /single-category.php?slug=$1 [NC]
+RewriteRule ^product/([0-9a-zA-Z-_]+)$ /single-product.php?slug=$1 [NC]

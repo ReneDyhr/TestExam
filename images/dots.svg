@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="dots">
+        <circle id="dot" cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        <g id="dot1" transform="matrix(1,0,0,1,0,20)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot2" transform="matrix(1,0,0,1,0,10)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot3" transform="matrix(1,0,0,1,10,0)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot4" transform="matrix(1,0,0,1,10,20)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot5" transform="matrix(1,0,0,1,20,0)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot6" transform="matrix(1,0,0,1,20,20)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+        <g id="dot7" transform="matrix(1,0,0,1,20,10)">
+            <circle cx="2.5" cy="2.5" r="2.5" style="fill:rgb(152,154,141);"/>
+        </g>
+    </g>
+</svg>
