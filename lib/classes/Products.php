@@ -37,15 +37,15 @@ class Products{
         }
         if($product_id==0){
             if(!$getAll){
-                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE (status=0 OR status IS NULL) ORDER BY `inventory` DESC, $limit")->results();
+                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE (status=0 OR status IS NULL) ORDER BY `inventory` ASC, $limit")->results();
             }else{
-                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE (status=0 OR status IS NULL)  ORDER BY `inventory` DESC $limit")->results();
+                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE (status=0 OR status IS NULL)  ORDER BY `inventory` ASC $limit")->results();
             }
         }else{
             if(!$getAll){
-                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE id = ? AND (status=0 OR status IS NULL) ORDER BY `inventory` DESC $limit", array($product_id))->results()[0];
+                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE id = ? AND (status=0 OR status IS NULL) ORDER BY `inventory` ASC $limit", array($product_id))->results()[0];
             }else{
-                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE id = ? ORDER BY `inventory` DESC $limit", array($product_id))->results()[0];
+                $query = $this->DB->query("SELECT * FROM ".DB_PREFIX."products WHERE id = ? ORDER BY `inventory` ASC $limit", array($product_id))->results()[0];
             }
         }
         return $query;
